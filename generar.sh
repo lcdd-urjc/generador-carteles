@@ -59,7 +59,8 @@ if ! [[ "$AULA" =~ ^[0-9S][0-9]{2}$ ]]; then
 fi
 
 # Formatear fecha
-FECHAFORMATEADA=$(LC_TIME="es_ES.UTF-8" date -d "$ANIO-$MES-$DIA" "+%^A %d %B" | awk '{ $3 = toupper(substr($3,1,1)) substr($3,2); print }')
+# toupper $1 es necesario para que las tildes queden en mayúscula también
+FECHAFORMATEADA=$(LC_ALL="es_ES.UTF-8" LC_TIME="es_ES.UTF-8" date -d "$ANIO-$MES-$DIA" "+%A %d %B" | awk '{ $1 = toupper($1); $3 = toupper(substr($3,1,1)) substr($3,2); print }')
 
 # Generar QR
 qrencode -o "$OUTPUTNAME-qr.png" -s 6 -m 5 "$URL" && echo "$OUTPUTNAME-qr.png generado"
@@ -69,7 +70,7 @@ sed \
     -e "s|{fecha}|$FECHAFORMATEADA|g" \
     -e "s|{aulario}|$AULARIO|g" \
     -e "s|{aula}|$AULA|g" \
-    -e "s|{qr}|$OUTPUTNAME-qr.png|g" \
+    -e "s|{qr}|$(basename "$OUTPUTNAME")-qr.png|g" \
     "$PLANTILLA" > "$OUTPUTNAME.svg" && echo "$OUTPUTNAME-qr.svg generado"
 
 
