@@ -1,0 +1,151 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 2171" width="1536" height="2171">
+  <defs>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700');
+
+        tspan {
+            white-space: pre;
+            font-family: "PT Sans";
+            stroke-linejoin: round;
+        }
+
+        .texto {
+            fill: #fff;
+            stroke: #fff;
+        }
+
+        .borde {
+            fill: #000;
+            stroke: #000;
+            filter: drop-shadow(2.93px 8.51px 14.5px #000);
+        }
+
+        .t0 {
+            font-size: 72px;
+            letter-spacing: 1px;
+        }
+
+        .texto .t0 {
+            stroke-width: 2;
+        }
+
+        .borde .t0 {
+            stroke-width: 18;
+        }
+
+        .t1 {
+            font-size: 51px;
+            letter-spacing: 1px;
+        }
+
+        .texto .t1 {
+            stroke-width: 1;
+        }
+
+        .borde .t1 {
+            stroke-width: 13;
+        }
+
+        .t2 {
+            font-size: 123px;
+            letter-spacing: 2.75px;
+        }
+
+        .texto .t2 {
+            stroke-width: 3;
+        }
+
+        .borde .t2 {
+            stroke-width: 25;
+        }
+
+        .t3 {
+            font-size: 86px;
+            letter-spacing: 1px;
+        }
+
+
+        .texto .t3 {
+            stroke-width: 2;
+        }
+
+        .borde .t3 {
+            stroke-width: 20;
+        }
+
+        .t4 {
+            font-size: 60px;
+            letter-spacing: 1px;
+        }
+
+        .texto .t4 {
+            stroke-width: 1;
+        }
+
+        .borde .t4 {
+            stroke-width: 15;
+        }
+
+    </style>
+  </defs>
+  <!-- Background image -->
+  <image
+      href="fondo.png"
+      x="0"
+      y="0"
+      width="1536"
+      height="2171"
+  />
+
+  <image
+      href="{qr}"
+      x="362"
+      y="1879"
+      width="234"
+      height="234"
+  />
+
+  <g id="text">
+    <text class="borde" style="transform: matrix(.812,0,0,.812,753.161,1099.695);">
+        <tspan x="0" y="0" text-anchor="middle" class="t2">{fecha}</tspan>
+        <tspan x="0" y="147.8" text-anchor="middle" class="t2">10.00 - 20.00</tspan>
+        <tspan x="0" y="251.2" text-anchor="middle" class="t3">{aulario} - Aula {aula}</tspan>
+        <tspan x="0" y="354.7" text-anchor="middle" class="t3">URJC - Móstoles</tspan>
+    </text>
+    <text class="texto" style="transform: matrix(.812,0,0,.812,753.161,1099.695);">
+        <tspan x="0" y="0" text-anchor="middle" class="t2">{fecha}</tspan>
+        <tspan x="0" y="147.8" text-anchor="middle" class="t2">10.00 - 20.00</tspan>
+        <tspan x="0" y="251.2" text-anchor="middle" class="t3">{aulario} - Aula {aula}</tspan>
+        <tspan x="0" y="354.7" text-anchor="middle" class="t3">URJC - Móstoles</tspan>
+    </text>
+    <text class="borde" transform="translate(45.5,1737.1)">
+      <tspan x="0" y="0" class="t0">¡Ven a jugar</tspan>
+      <tspan x="0" y="86.4" class="t0">con nosotros!</tspan>
+    </text>
+    <text class="texto" transform="translate(45.5,1737.1)">
+      <tspan x="0" y="0" class="t0">¡Ven a jugar</tspan>
+      <tspan x="0" y="86.4" class="t0">con nosotros!</tspan>
+    </text>
+
+    <text class="borde" style="transform: matrix(.915,0,0,.915,1468.479,1588.263);">
+        <tspan x="0" y="0" text-anchor="end" class="t4">Virus, Catán, Munchkin,</tspan>
+        <tspan x="0" y="72" text-anchor="end" class="t4">Coup, Qé, Carcassone,</tspan>
+        <tspan x="0" y="144" text-anchor="end" class="t4">Exploding Kittens,</tspan>
+        <tspan x="0" y="216" text-anchor="end" class="t4">¡Y MUCHOS MÁS!</tspan>
+    </text>
+    <text class="texto" style="transform: matrix(.915,0,0,.915,1468.479,1588.263);">
+        <tspan x="0" y="0" text-anchor="end" class="t4">Virus, Catán, Munchkin,</tspan>
+        <tspan x="0" y="72" text-anchor="end" class="t4">Coup, Qé, Carcassone,</tspan>
+        <tspan x="0" y="144" text-anchor="end" class="t4">Exploding Kittens,</tspan>
+        <tspan x="0" y="216" text-anchor="end" class="t4">¡Y MUCHOS MÁS!</tspan>
+    </text>
+    <text class="borde" style="transform: matrix(1,0,.024,1.006,1459.359,1868.584);">
+      <tspan x="0" y="0" text-anchor="end" class="t1">¡También puedes traer</tspan>
+      <tspan x="0" y="61" text-anchor="end" class="t1">tus propios juegos!</tspan>
+    </text>
+    <text class="texto" style="transform: matrix(1,0,.024,1.006,1459.359,1868.584);">
+      <tspan x="0" y="0" text-anchor="end" class="t1">¡También puedes traer</tspan>
+      <tspan x="0" y="61" text-anchor="end" class="t1">tus propios juegos!</tspan>
+    </text>
+  </g>
+</svg>
