@@ -72,7 +72,7 @@ sed \
     -e "s|{aulario}|$AULARIO|g" \
     -e "s|{aula}|$AULA|g" \
     -e "s|{qr}|$(basename "$OUTPUTNAME")-qr.png|g" \
-    "$PLANTILLA" > "$OUTPUTNAME.svg" && echo "$OUTPUTNAME-qr.svg generado"
+    "$PLANTILLA" > "$OUTPUTNAME.svg" && echo "$OUTPUTNAME.svg generado"
 
 
 # Convertir a png y pdf
