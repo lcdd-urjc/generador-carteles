@@ -2,6 +2,7 @@
 set -e
 
 USO="Uso: $0 PLANTILLA DD/MM/YYYY AULARIO AULA [URL]"
+LOCALE="es_ES.UTF-8"
 
 # Mirar si hay --help
 for arg in "$@"; do
@@ -60,7 +61,7 @@ fi
 
 # Formatear fecha
 # toupper $1 es necesario para que las tildes queden en mayúscula también
-FECHAFORMATEADA=$(LC_ALL="es_ES.UTF-8" LC_TIME="es_ES.UTF-8" date -d "$ANIO-$MES-$DIA" "+%A %d %B" | awk '{ $1 = toupper($1); $3 = toupper(substr($3,1,1)) substr($3,2); print }')
+FECHAFORMATEADA=$(LC_ALL="$LOCALE" LC_TIME="$LOCALE" date -d "$ANIO-$MES-$DIA" "+%A %d %B" | awk '{ $1 = toupper($1); $3 = toupper(substr($3,1,1)) substr($3,2); print }')
 
 # Generar QR
 qrencode -o "$OUTPUTNAME-qr.png" -s 6 -m 5 "$URL" && echo "$OUTPUTNAME-qr.png generado"
