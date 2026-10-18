@@ -23,7 +23,6 @@ nix run . -- ruta-a-la-plantilla.svg DD/MM/YYYY AULARIO AULA [URL]
 Si prefieres ejecutar el generador directamente, necesitas instalar previamente las dependencias y las fuentes utilizadas por la plantilla.
 
 #### Dependencias necesarias
-* [`file`](https://darwinsys.com/file/)
 * [`librsvg`](https://gitlab.gnome.org/GNOME/librsvg)
 * [`qrencode`](https://fukuchi.org/works/qrencode/)
 
@@ -32,6 +31,7 @@ Estas herramientas también son necesarias, aunque suelen estar instaladas por d
 * [`awk`](https://www.gnu.org/software/gawk/)
 * [`bash`](https://www.gnu.org/software/bash/)
 * [`coreutils`](https://www.gnu.org/software/coreutils/)
+* [`file`](https://darwinsys.com/file/)
 * [`grep`](https://www.gnu.org/software/grep/)
 * [`sed`](https://www.gnu.org/software/sed/)
 
