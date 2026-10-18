@@ -37,7 +37,7 @@ Estas herramientas también son necesarias, aunque suelen estar instaladas por d
 
 Una vez instaladas todas las dependencias y las fuentes, ejecuta el script.
 
-# Uso
+## Uso
 El generador recibe cuatro argumentos obligatorios y uno opcional:
 ```bash
 ./generar.sh PLANTILLA FECHA AULARIO AULA [URL]
@@ -51,7 +51,7 @@ El generador recibe cuatro argumentos obligatorios y uno opcional:
 |AULA|Identificador o nombre del aula. Sustituye el marcador {aula} de la plantilla.|
 |URL|Opcional. Dirección web utilizada para generar el código QR. Por defecto, se utiliza https://cavernadeldragon.org.|
 
-## Ejemplo
+### Ejemplo
 Para generar un cartel para el aula 208 de Laboratorios 1, con fecha del 23 de octubre de 2026 y un QR que apunte a https://cavernadeldragon.org/eventos/23, ejecuta:
 ```bash
 nix run github:lcdd-urjc/generador-carteles -- plantilla.svg 23/10/2026 "Lab 1" 208 https://cavernadeldragon.org/eventos/23
@@ -61,7 +61,7 @@ Si utilizas el generador sin Nix, ejecuta el mismo comando sustituyendo la prime
 
 Si omites el argumento URL, el código QR apuntará a https://cavernadeldragon.org.
 
-# Plantillas
+## Plantillas
 La plantilla se define mediante un archivo SVG. El generador utiliza los siguientes marcadores para completar el cartel:
 
 * `{fecha}`: fecha formateada a partir del argumento proporcionado.
@@ -71,7 +71,7 @@ La plantilla se define mediante un archivo SVG. El generador utiliza los siguien
 
 Asegúrate de que las fuentes utilizadas por la plantilla estén instaladas en el sistema.
 
-# Resultados
+## Resultados
 
 Los resultados se generan en el mismo directorio que la plantilla.
 
