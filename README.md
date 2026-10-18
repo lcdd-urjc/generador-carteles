@@ -5,16 +5,19 @@ Generador de carteles a partir de una plantilla SVG. El programa genera automát
 ### Usar con Nix (recomendado)
 Para ejecutar el generador con Nix, necesitas tener habilitadas las [flakes](https://wiki.nixos.org/wiki/Flakes#Setup).
 
-No es necesario clonar el repositorio ni instalar manualmente las dependencias. Puedes ejecutar el generador directamente con:
+No es necesario instalar manualmente las dependencias. Tampoco es necesario instalar las fuentes utilizadas por la plantilla en tu sistema si incluyes los archivos `.ttf` correspondientes en el directorio `fonts/` del proyecto.
+
+Puedes ejecutar el generador desde el directorio raíz del repositorio con:
 ```bash
-nix run github:lcdd-urjc/generador-carteles -- ruta-a-la-plantilla.svg DD/MM/YYYY AULARIO AULA [URL]
+nix run . -- ruta-a-la-plantilla.svg DD/MM/YYYY AULARIO AULA [URL]
 ```
-
-Si has publicado cambios nuevos y Nix sigue utilizando una referencia almacenada en caché, puedes forzar la actualización añadiendo `--refresh` al comando.
-
-Si ya has clonado el repositorio, puedes utilizar la misma instrucción sustituyendo `github:lcdd-urjc/generador-carteles` por la ruta al directorio raíz del repositorio.
-
-No es necesario instalar las fuentes utilizadas por la plantilla en tu sistema si incluyes los archivos .ttf correspondientes en el directorio fonts del proyecto.
+ 
+> [!TIP]
+> No es necesario clonar el repositorio. Puedes ejecutar el generador directamente con:
+> ```bash
+> nix run github:lcdd-urjc/generador-carteles -- ruta-a-la-plantilla.svg DD/MM/YYYY AULARIO AULA [URL]
+> ```
+> Si has publicado cambios nuevos y Nix sigue utilizando una referencia almacenada en caché, puedes forzar la actualización añadiendo `--refresh` al comando.
 
 ### Usar sin Nix
 Si prefieres ejecutar el generador directamente, necesitas instalar previamente las dependencias y las fuentes utilizadas por la plantilla.
