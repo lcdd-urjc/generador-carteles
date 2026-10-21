@@ -57,6 +57,7 @@ if ! [[ "$AULA" =~ ^[0-9S][0-9]{2}$ ]]; then
     echo "Aula incorrecta: $AULA" >&2
     echo "El aula debe tener 3 cifras o empezar por S si es un sótano. (ej. 007, 102, S07)" >&2
     echo "$USO" >&2
+    exit 1
 fi
 
 # Formatear fecha
